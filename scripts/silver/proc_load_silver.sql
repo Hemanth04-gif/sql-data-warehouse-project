@@ -182,8 +182,8 @@ BEGIN
 					bdate
 			END AS bdate, -- Set furture birthdates to NULL
 			CASE
-				WHEN UPPER(TRIM(gen)) IN ('M','MALE') THEN 'MALE'
-				WHEN UPPER(TRIM(gen)) IN ('F','FEMALE') THEN 'FEMALE'
+				WHEN UPPER(TRIM(gen)) IN ('M','MALE') THEN 'Male'
+				WHEN UPPER(TRIM(gen)) IN ('F','FEMALE') THEN 'Female'
 				ELSE 'n/a'
 			END AS gen -- Normalize gender values and handle unknown cases
 		FROM bronze.erp_cust_az12
